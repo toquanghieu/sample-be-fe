@@ -1,0 +1,37 @@
+{
+  "name": "shoes-fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack Shoes Collection App with React + Node.js",
+  "scripts": {
+    "install:all": "pnpm install",
+    "dev": "pnpm -r --parallel run dev",
+    "dev:backend": "pnpm -F shoes-api run dev",
+    "dev:frontend": "pnpm -F shoes-frontend run dev",
+    "start:backend": "pnpm -F shoes-api run start",
+    "start:frontend": "pnpm -F shoes-frontend run preview",
+    "build": "pnpm -r run build",
+    "build:backend": "pnpm -F shoes-api run build",
+    "build:frontend": "pnpm -F shoes-frontend run build",
+    "db:generate": "pnpm -F shoes-api run prisma:generate",
+    "db:migrate": "pnpm -F shoes-api run prisma:migrate",
+    "db:seed": "pnpm -F shoes-api run prisma:seed",
+    "db:studio": "pnpm -F shoes-api run prisma:studio",
+    "db:setup": "pnpm run db:generate && pnpm run db:migrate && pnpm run db:seed",
+    "setup": "pnpm install && pnpm run db:setup && pnpm -F shoes-api run tsoa:generate",
+    "lint": "pnpm -r --parallel run lint",
+    "lint:backend": "pnpm -F shoes-api run lint",
+    "lint:frontend": "pnpm -F shoes-frontend run lint"
+  },
+  "keywords": [
+    "react",
+    "nodejs",
+    "express",
+    "typescript",
+    "prisma",
+    "fullstack"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@9.0.0"
+}
